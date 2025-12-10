@@ -2,7 +2,9 @@ import path from 'path';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ base: '/Generate-Image/',plugins: [react()], }) => {
+// https://vitejs.dev/config/
+export default defineConfig({
+  base: '/Generate-Image/',plugins: [react()], }) => {
     const env = loadEnv(mode, '.', '');
     return {
       server: {
